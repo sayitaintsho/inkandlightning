@@ -144,6 +144,9 @@
 
     .hero--single {
       grid-template-columns: 1fr;
+    }
+
+    .hero--single > *:not(.hero-image) {
       max-width: 720px;
     }
 
@@ -763,17 +766,22 @@
       height: 100%;
       object-fit: cover;
       object-position: center 30%;
-      opacity: 0.22;
-      filter: saturate(0.2) contrast(1.6) brightness(0.9);
+      filter: saturate(0.5) contrast(1.6) brightness(0.85);
     }
 
-    /* Purple/inky tint overlay */
+    /* Gradient overlay: opaque left (text area) → transparent right (image shows through) */
     .hero-image::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(45, 31, 78, 0.15);
-      mix-blend-mode: multiply;
+      background: linear-gradient(
+        to right,
+        var(--paper) 0%,
+        rgba(247, 244, 239, 0.85) 25%,
+        rgba(247, 244, 239, 0.45) 50%,
+        rgba(45, 31, 78, 0.08) 75%,
+        transparent 100%
+      );
       pointer-events: none;
     }
 
