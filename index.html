@@ -325,7 +325,9 @@
       display: flex;
       gap: 0;
       white-space: nowrap;
+      width: max-content;
       animation: marquee 22s linear infinite;
+      will-change: transform;
     }
 
     .marquee-item {
@@ -345,8 +347,8 @@
     }
 
     @keyframes marquee {
-      from { transform: translateX(0); }
-      to   { transform: translateX(-50%); }
+      0%   { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
     }
 
     /* services section removed */
@@ -888,34 +890,34 @@
       </div>
     </div>
 
-    <!-- Process — pale purple (module 3) -->
+    <!-- Who We Work With — pale purple (module 3) -->
     <section class="process">
       <div class="section-header section-header--stacked">
-        <span class="section-label">How it works</span>
-        <h2 class="section-title">From first call to<br><em>first deliverables on your timeline.</em></h2>
+        <span class="section-label">Who we work with</span>
+        <h2 class="section-title">For founders who are<br><em>done playing it safe.</em></h2>
       </div>
       <div class="process-steps">
         <div class="process-step">
           <div class="step-num">01</div>
-          <h3 class="step-title">Discovery</h3>
-          <p class="step-desc">Your product, your customers, your voice, your untapped channels. We go deep before we write a word.</p>
+          <h3 class="step-title">Early Stage</h3>
+          <p class="step-desc">You're an early stage (pre-Series B) startup founder.</p>
         </div>
         <div class="process-step">
           <div class="step-num">02</div>
-          <h3 class="step-title">Ink on the Page</h3>
-          <p class="step-desc">First deliverables in your hands in as little as two weeks.</p>
+          <h3 class="step-title">Data-Driven</h3>
+          <p class="step-desc">You have data, patterns, and instincts competitors don't have access to.</p>
         </div>
         <div class="process-step">
           <div class="step-num">03</div>
-          <h3 class="step-title">Post, Measure, Iterate</h3>
-          <p class="step-desc">We track what resonates, channels with the most signal, and tailor formats accordingly.</p>
+          <h3 class="step-title">Long-Term Thinkers</h3>
+          <p class="step-desc">You believe that short-term growth and long-term brand compound together.</p>
         </div>
       </div>
     </section>
 
     <!-- CTA Band — deep purple (module 4) -->
     <div class="cta-band cta-band--centered">
-      <h2 class="cta-headline">You're already confident in your point of view.<br><em>It's time to put it to work.</em></h2>
+      <h2 class="cta-headline">Ready to turn your unique perspective<br><em>into a marketing engine?</em></h2>
       <a class="btn-dark" href="https://calendly.com/inkandlightning">Book a free call</a>
     </div>
 
