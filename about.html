@@ -769,9 +769,15 @@
     .page.active .anim:nth-child(4) { animation-delay: 0.26s; }
 
     /* ── RESPONSIVE ── */
+    .cta-short { display: none; }
+
     @media (max-width: 900px) {
+      .cta-full { display: none; }
+      .cta-short { display: inline; }
       nav { padding: 1.25rem 1.5rem; }
       .nav-links { gap: 1.5rem; }
+      .manifesto--hero { padding-top: 7rem; }
+      .manifesto, .manifesto-inner { overflow: visible; }
       .hero, .about-hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 4rem; gap: 3rem; }
       .hero::after { display: none; }
       .process-steps { grid-template-columns: 1fr; }
@@ -794,7 +800,7 @@
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a class="active" href="about.html">About</a></li>
-      <li><a class="nav-cta" href="https://calendly.com/inkandlightning" target="_blank" rel="noopener">Book a free call</a></li>
+      <li><a class="nav-cta" href="https://calendly.com/inkandlightning" target="_blank" rel="noopener"><span class="cta-full">Book a free call</span><span class="cta-short">Let's talk</span></a></li>
     </ul>
   </nav>
   <div id="page-about" class="page active">
