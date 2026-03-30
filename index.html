@@ -809,24 +809,13 @@
     .page.active .anim:nth-child(4) { animation-delay: 0.26s; }
 
     /* ── RESPONSIVE ── */
-    .cta-short { display: none; }
-
     @media (max-width: 900px) {
-      .cta-full { display: none; }
-      .cta-short { display: inline; }
       nav { padding: 1.25rem 1.5rem; }
       .nav-links { gap: 1.5rem; }
       .hero, .about-hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 4rem; gap: 3rem; }
       .hero::after { display: none; }
       .hero-image::after {
-        background: linear-gradient(
-          to right,
-          var(--paper) 0%,
-          rgba(247, 244, 239, 0.92) 30%,
-          rgba(247, 244, 239, 0.75) 55%,
-          rgba(247, 244, 239, 0.5) 80%,
-          rgba(247, 244, 239, 0.3) 100%
-        );
+        background: rgba(247, 244, 239, 0.88);
       }
       .process-steps { grid-template-columns: 1fr; }
       .process-step { border-right: none; border-bottom: 1px solid var(--rule); padding: 2rem 0 !important; }
@@ -853,7 +842,7 @@
     <ul class="nav-links">
       <li><a id="nav-home" class="active" href="index.html">Home</a></li>
       <li><a id="nav-about" href="about.html">About</a></li>
-      <li><a class="nav-cta" href="https://calendly.com/inkandlightning" target="_blank" rel="noopener"><span class="cta-full">Book a free call</span><span class="cta-short">Let's talk</span></a></li>
+      <li><a class="nav-cta" href="https://calendly.com/inkandlightning" target="_blank" rel="noopener">Let's talk</a></li>
     </ul>
   </nav>
 
